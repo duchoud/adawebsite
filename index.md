@@ -1,4 +1,5 @@
 ![image](data/soldat-camera-foret_265223-17598.jpg)
+![image](data/Robert_Capa_by_Gerda_Taro.webp)
 At first glance, one might think that the pope does not have much impact on our everyday life and on our country’s politics, yet his opinion affects over 1.3 billion Catholics worldwide and he regularly meets with the most powerful political figures of the planet. Here, we want to investigate how one of the mightiest apolitical figures on Earth influences one sixth of the world population by using a novel quotations corpus : **Quotebank**. 
 
   
