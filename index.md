@@ -1,4 +1,4 @@
-<img src="https://github.com/duchoud/adawebsite/blob/gh-pages/data/images.jpg" width="1000" height="600">
+<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Ffr.freepik.com%2Fphotos-premium%2Fsoldat-camera-foret_21673930.htm&psig=AOvVaw3AT90S8TDALRBGsfgcqMEk&ust=1671738503126000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCOjX77O9i_wCFQAAAAAdAAAAABAI" width="1000" height="600">
 
 At first glance, one might think that the pope does not have much impact on our everyday life and on our country’s politics, yet his opinion affects over 1.3 billion Catholics worldwide and he regularly meets with the most powerful political figures of the planet. Here, we want to investigate how one of the mightiest apolitical figures on Earth influences one sixth of the world population by using a novel quotations corpus : **Quotebank**. 
 
