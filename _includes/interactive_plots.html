@@ -1,1 +1,197 @@
 <iframe src="https://ada-project-dash-app.onrender.com" width=900 height=2000></iframe>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>leaflet basic example</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.5.0/MarkerCluster.Default.css" />
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.5.0/leaflet.markercluster.js"></script>
+        <script src="geodata.js"></script>
+        <script src="marker_format.js"></script>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/8.5.1/nouislider.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/8.5.1/nouislider.min.js"></script>
+ 
+<style>
+            body {
+                padding: 0;
+                margin: 0;
+            }
+            html, body, #map {
+                height: 100%;
+            }
+        </style>
+ 
+    </head>
+    <body>
+ 
+<div id="slider" style="top: 0px; right: 1px; margin: 50px 50px;">
+
+</div>
+<div style="margin-right: auto; margin-left: auto; width: 90%; margin-bottom: 20px; text-align: center;">
+<input type="number" min='1905' max='2015 ' id="input-number-min">
+<input type="number" min='1905' max='2015 ' id="input-number-max">
+<script>
+
+    var slidervar = document.getElementById('slider');
+    noUiSlider.create(slidervar, {
+        connect: true,
+        start: [1905, 2015],
+        range: {
+            min: 1905,
+            max: 2015 
+        },
+        format: {
+    from: function(value) {
+            return parseInt(value);
+        },
+    to: function(value) {
+            return parseInt(value);
+        }
+    },
+        step:1,
+        tooltips: true,
+        pips: {
+        mode: 'count',
+        values: 12,
+        density: 1,
+        format: {
+    from: function(value) {
+            return parseInt(value);
+        },
+    to: function(value) {
+            return parseInt(value);
+        }
+    },
+    }
+    });
+
+    document.getElementById('input-number-min').setAttribute("value", 1905);
+    document.getElementById('input-number-max').setAttribute("value", 2015);
+
+    var inputNumberMin = document.getElementById('input-number-min');
+    var inputNumberMax = document.getElementById('input-number-max');
+    inputNumberMin.addEventListener('change', function(){
+        slidervar.noUiSlider.set([this.value, null]);
+    });
+    inputNumberMax.addEventListener('change', function(){
+        slidervar.noUiSlider.set([null, this.value]);
+    });
+
+    slidervar.noUiSlider.on('update', function( values, handle ) {
+    //handle = 0 if min-slider is moved and handle = 1 if max slider is moved
+    if (handle==0){
+        document.getElementById('input-number-min').value = values[0];
+    } else {
+        document.getElementById('input-number-max').value =  values[1];
+    }
+    rangeMin = document.getElementById('input-number-min').value;
+    rangeMax = document.getElementById('input-number-max').value;
+
+    //first let's clear the layer:
+    cluster_popplaces.clearLayers();
+    //and repopulate it
+    popplaces = new L.geoJson(geojson,{
+        onEachFeature: pop_popplaces,
+            filter:
+                function(feature, layer) {
+                    return (feature.properties.Movie_release <= rangeMax) && (feature.properties.Movie_release >= rangeMin);
+                },
+        pointToLayer: popplaces_marker
+    })
+    //and back again into the cluster group
+    cluster_popplaces.addLayer(popplaces);
+
+    })
+</script>
+</div>
+
+<div id="map"></div>
+ 
+        <script>
+        var map = L.map('map', {
+            zoomControl:true, maxZoom:7
+        }).setView([20, 0], 3);
+        var basemap_0 = L.tileLayer( 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
+            maxZoom: 18
+        });
+        basemap_0.addTo(map);
+        
+        function getColor(d) {
+            return d > 0.71  ? '#1a9850' :
+                d > 0.43  ? '#91cf60' :
+                d > 0.14  ? '#d9ef8b' :
+                d > -0.14   ? '#ffffbf' :
+                d > -0.43  ? '#fee08b' :
+                d > -0.71   ? '#fc8d59' :
+                            '#d73027';
+        }
+
+        function getScale(d) {
+            return d > 9999  ? 55 :
+                d > 4999  ? 50 :
+                d > 999  ? 45 :
+                d > 499  ? 40 :
+                d > 99   ? 35 :
+                d > 49  ? 30 :
+                d > 9   ? 25 :
+                            20;
+        }
+
+        function pop_popplaces(feature, layer) {
+            var popupContent = 'Release: ' + String(feature.properties['Movie_release']) + '<br>Name: ' + String(feature.properties['Movie_name_y'])+ '<br>Sentiment: ' + String(feature.properties['general_sentiment']);
+            layer.bindPopup(popupContent);
+        }
+
+        customCircleMarker = L.CircleMarker.extend({
+            options: { 
+                sentiment: 0
+            }
+            });
+        
+        function popplaces_marker(feature, latlng) {
+            return L.circleMarker(latlng, {
+                radius: 8.0,
+                fillColor: getColor(feature.properties.general_sentiment),
+                color: '#000000',
+                weight: 1,
+                opacity: 1.0,
+                fillOpacity: 0.8,
+                sentiment: feature.properties.general_sentiment
+            })
+        }
+        
+        var popplaces = new L.geoJson(geojson,{
+            onEachFeature: pop_popplaces,
+            pointToLayer: popplaces_marker,
+        });
+
+        var cluster_popplaces= new L.MarkerClusterGroup({showCoverageOnHover: false, iconCreateFunction: function (cluster) {
+            var markers = cluster.getAllChildMarkers(); // on récupère tous les marqueurs du cluster ciblé
+			var childCount = cluster.getChildCount(); // on en récupère le nombre
+            var max = markers.length;
+            let valueSum = 0;
+            
+            for (let i = 0; i < max; ++i) {
+                valueSum += Number(markers[0].options.sentiment);
+            }
+            const valueMean = valueSum/max;
+            color = getColor(valueMean);
+            scale = getScale(childCount);
+
+			var html = '<div style="background-color:white; border:6px solid '+color+'; border-radius: 50%; width:'+scale+'px;  height:'+scale+'px; text-align:center; align-items: center; display: flex; justify-content: center;"><span>' + childCount + '</span></div>';
+			return L.divIcon({ html: html, className: "marker-cluster", iconSize: L.point(40, 40), color: '#d73027' }); 
+                        }
+        });
+
+        cluster_popplaces.addLayer(popplaces);
+        cluster_popplaces.addTo(map);
+        var baseMaps = {'OSM Black & White': basemap_0};
+        controler = L.control.layers(baseMaps,{"places": cluster_popplaces,"protected land points": protecland},{collapsed:false}).addTo(map);
+    </script>
+</body>
+</html>
