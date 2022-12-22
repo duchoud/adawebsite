@@ -31,7 +31,6 @@
     </head>
 <body>
 
-
 <div id="map" style="width: 100%; height: 600px"></div>
 
 <script>
@@ -77,15 +76,7 @@
         });
     
     function popplaces_marker(feature, latlng) {
-        return L.circleMarker(latlng, {
-            radius: 8.0,
-            fillColor: getColor(feature.properties.general_sentiment),
-            color: '#000000',
-            weight: 1,
-            opacity: 1.0,
-            fillOpacity: 0.8,
-            sentiment: feature.properties.general_sentiment
-        })
+        return L.marker([20, 0])
     }
     
     var marker = L.marker([51.5, -0.09]).addTo(map);
@@ -93,7 +84,7 @@
     var popplaces = new L.geoJson(geojson,{
         onEachFeature: pop_popplaces,
         pointToLayer: popplaces_marker,
-    });
+    }).addTo(map);
     
     var cluster_popplaces= new L.MarkerClusterGroup({showCoverageOnHover: false, iconCreateFunction: function (cluster) {
         var markers = cluster.getAllChildMarkers(); // on récupère tous les marqueurs du cluster ciblé
@@ -115,7 +106,6 @@
     
     cluster_popplaces.addLayer(popplaces);
     cluster_popplaces.addTo(map);
-    popplaces.addTo(map);
     var baseMaps = {'OSM Black & White': basemap_0};
     controler = L.control.layers(baseMaps,{"places": cluster_popplaces,"protected land points": protecland},{collapsed:false}).addTo(map);
     </script>
