@@ -76,15 +76,53 @@
         });
     
     function popplaces_marker(feature, latlng) {
-        return L.marker([20, 0])
+        return L.circleMarker(latlng, {
+            radius: 8.0,
+            fillColor: getColor(feature.properties.general_sentiment),
+            color: '#000000',
+            weight: 1,
+            opacity: 1.0,
+            fillOpacity: 0.8,
+            sentiment: feature.properties.general_sentiment
+        })
     }
     
-    var marker = L.marker([51.5, -0.09]).addTo(map);
+    var marker = L.marker([51.5, -0.09]);
+
+    var marker1 = L.circleMarker([41.5, -0.09], {
+            radius: 8.0,
+            fillColor: '#d73027',
+            color: '#000000',
+            weight: 1,
+            opacity: 1.0,
+            fillOpacity: 0.8,
+            sentiment: 0
+        });
+
+        var marker2 = L.circleMarker([31.5, -0.09], {
+            radius: 8.0,
+            fillColor: '#d73027',
+            color: '#000000',
+            weight: 1,
+            opacity: 1.0,
+            fillOpacity: 0.8,
+            sentiment: 0
+        });
+
+        var marker3 = L.circleMarker([33, -0.09], {
+            radius: 8.0,
+            fillColor: '#d73027',
+            color: '#000000',
+            weight: 1,
+            opacity: 1.0,
+            fillOpacity: 0.8,
+            sentiment: 0
+        });
     
     var popplaces = new L.geoJson(geojson,{
         onEachFeature: pop_popplaces,
         pointToLayer: popplaces_marker,
-    }).addTo(map);
+    });
     
     var cluster_popplaces= new L.MarkerClusterGroup({showCoverageOnHover: false, iconCreateFunction: function (cluster) {
         var markers = cluster.getAllChildMarkers(); // on récupère tous les marqueurs du cluster ciblé
@@ -104,8 +142,13 @@
                     }
     });
     
-    cluster_popplaces.addLayer(popplaces);
+    //cluster_popplaces.addLayer(popplaces);
+    cluster_popplaces.addLayer(marker);
+    cluster_popplaces.addLayer(marker1);
+    cluster_popplaces.addLayer(marker2);
+    cluster_popplaces.addLayer(marker3);
     cluster_popplaces.addTo(map);
+
     var baseMaps = {'OSM Black & White': basemap_0};
     controler = L.control.layers(baseMaps,{"places": cluster_popplaces,"protected land points": protecland},{collapsed:false}).addTo(map);
     </script>
