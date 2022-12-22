@@ -17,7 +17,7 @@ We have inputted N time series, one of every movie genre. Despite all time serie
 We can notice two phases in that period: first an important increase followed by an increase.
 One possible hypothesis is that when the war arose all existing projects were exceptionally speeded up and rushed to be on production before being put on hold due to the war. Then, when the war conditions became too severe, it was not possible to produce anymore. After the war, the number of wars stabilised and became more present than it was before.
 
-![image](data/trend_change.jpg)
+![image](data/output.png)
 
 Now, we would like to focus on war movies production before and after four wars and four dates
 * WWII: 1939 (beginning of the year)
@@ -33,7 +33,6 @@ Now, we would like to focus on war movies production before and after four wars 
 |Iraq|Stable period before 1939|Rise and fall of movies production|Rise: to improve war's popularity   <br />   Fall: trends don't last right?|
 |First Golf War:|Not conclusive result||One year war, with less popular impact|
   
-<\br> 
 
 |![image](data/final_plots/two_trends_WWII.png)|![image](data/final_plots/two_trends_gulf.png)|
 |![image](data/final_plots/two_trends_iraq.png)|![image](data/final_plots/two_trends_vietnam.png)|
