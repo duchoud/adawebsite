@@ -5,6 +5,8 @@ It's no secret that humans have always had a knack for finding new and creative 
 
 The consequences of war can be far-reaching and long-lasting, affecting not only the countries directly involved in the conflict, but also the wider world. In the world of film, war has had a significant impact on films, both as a theme and as an influence on filmmakers. Many films have used the backdrop of war to explore themes of conflict and loss  which may lead to shifts in cultural attitudes and sometimes propaganda. It is worth considering whether the depiction of war in films has changed over time.
 
+![image](data/top10.jpg)
+
 Our dataset being majorly composed of American movies, we wil focus on the impact of major movies (WW2, ….) on American movies. Our Battle Strategy to uncover the impact of wars on movies to this project is simple: we're going to storm the CMU Movie Summary Dataset with all NLP guns and Time series’ shields blazing. We'll be attacking the evolution of war movies’ production and sentiments per genre, then examining how sentiments associated with different countries have changed. It's a battle we're prepared to fight, and we won't rest until we've won the war for knowledge!
 
 ## Genre-al Warfare: Evolution of Movie Categories
