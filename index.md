@@ -31,15 +31,17 @@ Now, we would like to focus on war movies production before and after four wars 
 |Iraq|Stable period before 1939|Rise and fall of movies production|Rise: to improve war's popularity Fall: trends don't last right?|
 |First Golf War:|Not conclusive result||One year war, with less popular impact|
   
+![image](data/quadriplot.PNG)
+ 
 Veni,vidi, vici! War production per year is ours. It’s time to attack Sentiment per genre town. Allow me to transcribe Genre-al’s great speech:
 
 “In the battlefield of data analysis, we must always be prepared for the enemy: dirty and unstructured text. But fear not, for we have a secret weapon: the classical NLP cleaning process. First, we strike at the heart of the problem by removing any special characters or punctuation that may be hiding in the data. Next, we eliminate any numerical distractions by eradicating all numbers from the battlefield. Then, we eliminate the weakest players, the stop words, from the field of play. With the text now stripped down to its essentials, we can launch a full-scale attack by dividing it into smaller units, known as tokens. We don't stop there, oh no. We also engage in a strategic manoeuvre known as stemming, reducing words to their base forms and eliminating any unnecessary redundancies. But beware, the enemy is clever and may try to hide behind contexts and parts of speech. Fear not, for we have a secret weapon for this too: lemmatization. Finally, we lowercase all the words, ensuring that no word is left standing. And with that, our text is clean and ready for analysis, with every word in its rightful place.
 
 But our mission does not end here. We also want to know the sentiment of each movie, so we will create a sentiment analysis score for every text. With this score, we can determine the overall sentiment of each movie genre and use this information to better understand the impact of war on film. Victory is ours!"
 However, a picture is worth a thousand wars so here’s the picture of Sentiment_per_genre town after the conquer. 
-
+![image](data/heatmap1939.jpg)
 After World War II, the action genre in movies became more negative in tone, while comedy became more neutral. Horror also took on a more negative tone. One possible interpretation of these trends is that movies are a reflection of society and the changes in the film industry may have been influenced by the events and attitudes of the time.
-
+![image](data/heatmap2000.jpg)
 In the case of the Iraq War, the action genre became less negative, while romance and comedy became more positive. Horror also became more neutral. It is difficult to say for certain why these changes occurred, but it is possible that societal attitudes, industry trends, and political and cultural influences may have all played a role. - 
 
 
