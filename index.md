@@ -33,6 +33,7 @@ Now, we would like to focus on war movies production before and after four wars 
 |Iraq|Stable period before 1939|Rise and fall of movies production|Rise: to improve war's popularity   <br />   Fall: trends don't last right?|
 |First Golf War:|Not conclusive result||One year war, with less popular impact|
   
+<\br> 
 ![image](data/quadriplot.PNG)
  
 Veni,vidi, vici! War production per year is ours. It’s time to attack Sentiment per genre town. Allow me to transcribe Genre-al’s great speech:
