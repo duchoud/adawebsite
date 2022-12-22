@@ -148,8 +148,8 @@
     cluster_popplaces.addLayer(marker0);
     cluster_popplaces.addLayer(marker1);
     cluster_popplaces.addLayer(marker2);
-    cluster_popplaces.addLayer(marker3);
     cluster_popplaces.addTo(map);
+    marker3.addTo(map)
 
     var baseMaps = {'OSM Black & White': basemap_0};
     controler = L.control.layers(baseMaps,{"places": cluster_popplaces,"protected land points": protecland},{collapsed:false}).addTo(map);
