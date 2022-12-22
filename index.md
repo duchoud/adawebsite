@@ -65,9 +65,6 @@ After World War II, the **action** and **horror genre in movies became **more ne
 ![image](data/final_plots/Heatmap_iraq.png)
 
 In the case of the Iraq War, the action genre became less negative, while romance and comedy became more positive. Horror also became more neutral. It is difficult to say for certain why these changes occurred, but it is possible that societal attitudes, industry trends, and political and cultural influences may have all played a role. 
-Both the Vietnam War and the first golf war were not taken for their duration. Vietnam’s war. 
-
-
 
 ## Imagin-Nation : A battle for Country Sentiments in Movies
 *"Your sentiment is admirable, but misplaced." - The Dark Knight*
