@@ -29,7 +29,7 @@ Now, we would like to focus on war movies production before and after four wars 
 |WW2|Stable period before 1939|Rise and fall of movie production|Explained previously|
 |Vietnam|Increase of war movies|Decrease of war movies|Fair to assume that due to the protests, movies wanted to avoid a politically heated topic|
 |Iraq|Stable period before 1939|Rise and fall of movies production|Rise: to improve war's popularity Fall: trends don't last right?|
-|First Golf War:|Not conclusive result||One year war, with less popular impact|
+|First Golf War:|Not conclusive result|One year war, with less popular impact|
   
 Veni,vidi, vici! War production per year is ours. It’s time to attack Sentiment per genre town. Allow me to transcribe Genre-al’s great speech:
 
