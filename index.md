@@ -1,3 +1,4 @@
+<img  src="https://fr.freepik.com/photos-premium/soldat-camera-foret_21673930.htm"  alt="Five cats looking around a field."/>
 ![image](data/soldat-camera-foret_265223-17598.jpg)
 ## War and Peace... and Movies
 > "It's not the war I hate, it's what it does to people." - Captain John H. Miller, "Saving Private Ryan" (1998)
