@@ -34,7 +34,6 @@ Now, we would like to focus on war movies production before and after four wars 
 |First Golf War:|Not conclusive result||One year war, with less popular impact|
   
 <\br> 
-![image](data/quadriplot.PNG)
 
 |![image](data/final_plots/two_trends_WWII.png)|![image](data/final_plots/two_trends_gulf.png)|
 |![image](data/final_plots/two_trends_iraq.png)|![image](data/final_plots/two_trends_vietnam.png)|
