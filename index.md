@@ -3,6 +3,8 @@
 
 It's no secret that humans have always had a knack for finding new and creative ways to kill each other. From ancient battles with swords and shields to modern wars with drones and missiles, we just can't seem to resist the urge to go to war. If you were to look at a map of the world, you can see how the globe is covered in red lines just like our soil was tarnished with blood over the centuries.  But, you don’t need to imagine it, here it is:
 
+{% include map.html %}
+
 The consequences of war can be far-reaching and long-lasting, affecting not only the countries directly involved in the conflict, but also the wider world. In the world of film, war has had a significant impact on films, both as a theme and as an influence on filmmakers. Many films have used the backdrop of war to explore themes of conflict and loss  which may lead to shifts in cultural attitudes and sometimes propaganda. It is worth considering whether the depiction of war in films has changed over time.
 
 ![image](data/Top10pays.png)
