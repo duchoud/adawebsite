@@ -64,6 +64,15 @@ After World War II, the **action** and **horror genre in movies became **more ne
 
 In the case of the Iraq War, the action genre became less negative, while romance and comedy became more positive. Horror also became more neutral. It is difficult to say for certain why these changes occurred, but it is possible that societal attitudes, industry trends, and political and cultural influences may have all played a role. 
 
+## Funny Side Note:
+
+War is dark. Sometimes, when we face darkness, we tend to use comedy as a way to heal. Therefore we wanted to compare the lexicon used before and after the war by aggregating the plots used before WW2, Vietnam and Iraq and after.
+![image](data/wordcloud_before.png)
+It is interesting to nice that words such as “Kill, escape,death” appeared as most frequent words before the war while “find, house, come, back” appeared as most frequent words after the world.
+![image](data/wordcloud_after.png)
+We suppose that it is easier to do dark humor when you’re not living through dark times, whether we seek comfort after tragedies.
+
+
 ## Imagin-Nation : A battle for Country Sentiments in Movies
 > "Your sentiment is admirable, but misplaced." - The Dark Knight
 
