@@ -80,6 +80,7 @@ Upon further examination, we found that **Iraq, and Afghanistan** were frequentl
 Based on this analysis, it appears that the mentions of certain countries in movies coincide with major war periods, and the sentiments associated with these countries are mostly negative. These findings suggest that movies may serve as a reflection of society and its events and conflicts, and the sentiment associated with these events may be reflected in the portrayal of countries in movies. Take a look for yourself and play with this interactive graph and world map.
 
 {% include interactive_plots.html %}
+{% include test.html %}
 
 War has marched through the pages of history, leaving its mark on the world and on the silver screen. Movies are a mirror of society, reflecting its interests and conflicts, its joys and sorrows. And in times of war, the sentiments expressed in movies can be a window into the hearts and minds of the people. But beware: these sentiments are often negative, casting shadows on the human spirit and fueling stereotypes and prejudices. 
 
