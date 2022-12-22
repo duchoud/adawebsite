@@ -18,6 +18,7 @@ We can notice two phases in that period: first an important increase followed by
 One possible hypothesis is that when the war arose all existing projects were exceptionally speeded up and rushed to be on production before being put on hold due to the war. Then, when the war conditions became too severe, it was not possible to produce anymore. After the war, the number of wars stabilised and became more present than it was before.
 
 ![image](data/Robert_Capa_by_Gerda_Taro.webp)
+![image](data/trend_change.jpg)
 
 Now, we would like to focus on war movies production before and after four wars and four dates
 * WWII: 1939 (beginning of the year)
