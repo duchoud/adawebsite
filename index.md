@@ -19,11 +19,11 @@ Our dataset being composed of 30’000 American movies, we will focus on the imp
 #### War spotted!
 
 Our first battle in our quest of knowledge will be under the supervision of Genre-al Warfare. We will first conquer movies’ productions by genres and by period. 
-First ,we pulled the KATS library of our artillery. KATS is  generalizable framework to perform time series analysis developped by Admiral Zuckerberg. One of the bullets of KATS is RobustStatDetector, a method used to detect any significant variations in the time series.
+First ,we pulled the KATS library of our artillery. KATS is  generalizable framework to perform time series analysis developed by Admiral Zuckerberg. One of the bullets of KATS is CUSUMdetector, a statistical method implemented here to detect change variations in the specified time window, combined with a log likelihood ratio test to test if the mean are significantly different. 
 
 ![image](data/total_window.png)
 
-We have inputted **N** time series, one of every movie genre. Despite all time series being on visual, KATS were only able to accurately hit our war movie, and have depicted a **statistical variation** around 1939, without having any additional background check, i.e the method was not aware of WWII and yet detected it as the most significant change.
+We have inputted **37** time series, one of every movie genre. Despite all time series being on visual, KATS were only able to accurately hit our war movie, and have depicted a **statistical variation** around 1939, without having any additional background check, i.e the method was not aware of WWII and yet detected it as the most significant change.
 We can notice two phases in that period: first an **important increase** followed by a sudden **decrease**.
 One possible hypothesis is that when the war arose all existing projects were exceptionally speeded up and rushed to be on production before being put on hold due to the war. Then, when the war conditions became too severe, it was not possible to produce anymore. Starting from 1949,, the number of wars stabilised and became more present than it was before.
 
