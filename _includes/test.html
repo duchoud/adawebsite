@@ -88,7 +88,7 @@
     }
     
     var marker = L.marker([51.5, -0.09]);
-    var marker0 = L.marker([55, -0.09]);
+    var marker0 = L.marker([55, -0.09]).addTo(map);
 
     var marker1 = L.circleMarker([41.5, -0.09], {
             radius: 8.0,
@@ -118,7 +118,7 @@
             opacity: 1.0,
             fillOpacity: 0.8,
             sentiment: 0
-        });
+        }).addTo(map);
     
     var popplaces = new L.geoJson(geojson,{
         onEachFeature: pop_popplaces,
@@ -145,12 +145,9 @@
     
     //cluster_popplaces.addLayer(popplaces);
     cluster_popplaces.addLayer(marker);
-    cluster_popplaces.addLayer(marker0);
     cluster_popplaces.addLayer(marker1);
     cluster_popplaces.addLayer(marker2);
     cluster_popplaces.addTo(map);
-    marker0.addTo(map)
-    marker3.addTo(map)
 
     var baseMaps = {'OSM Black & White': basemap_0};
     controler = L.control.layers(baseMaps,{"places": cluster_popplaces,"protected land points": protecland},{collapsed:false}).addTo(map);
