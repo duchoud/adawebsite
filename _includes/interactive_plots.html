@@ -166,6 +166,8 @@ function popplaces_marker(feature, latlng) {
     })
 }
 
+var marker = L.marker([51.5, -0.09]).addTo(map);
+
 var popplaces = new L.geoJson(geojson,{
     onEachFeature: pop_popplaces,
     pointToLayer: popplaces_marker,
@@ -191,9 +193,9 @@ var popplaces = new L.geoJson(geojson,{
 
 //cluster_popplaces.addLayer(popplaces);
 //cluster_popplaces.addTo(map);
-popplaces.addTo(map);
-var baseMaps = {'OSM Black & White': basemap_0};
-controler = L.control.layers(baseMaps,{"places": cluster_popplaces,"protected land points": protecland},{collapsed:false}).addTo(map);
+//popplaces.addTo(map);
+//var baseMaps = {'OSM Black & White': basemap_0};
+//controler = L.control.layers(baseMaps,{"places": cluster_popplaces,"protected land points": protecland},{collapsed:false}).addTo(map);
 </script>
 </body>
 </html>
