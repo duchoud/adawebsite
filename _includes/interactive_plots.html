@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.Default.css" />
         <script src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script>
 
-        <script src="geodata.js"></script>
+        <script src="https://duchoud.github.io/adawebsite/data/geodata.js"></script>
         <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 
         <link rel="stylesheet" href="https://unpkg.com/nouislider@15.6.1/dist/nouislider.min.css" />
@@ -172,8 +172,6 @@ function popplaces_marker(feature, latlng) {
     })
 }
 
-var marker = L.marker([51.5, -0.09]).addTo(map);
-
 var popplaces = new L.geoJson(geojson,{
     onEachFeature: pop_popplaces,
     pointToLayer: popplaces_marker,
@@ -199,7 +197,7 @@ var cluster_popplaces= new L.MarkerClusterGroup({showCoverageOnHover: false, ico
 
 cluster_popplaces.addLayer(popplaces);
 cluster_popplaces.addTo(map);
-popplaces.addTo(map);
+
 var baseMaps = {'OSM Black & White': basemap_0};
 controler = L.control.layers(baseMaps,{"places": cluster_popplaces,"protected land points": protecland},{collapsed:false}).addTo(map);
 </script>
