@@ -94,4 +94,6 @@ Based on this analysis, it appears that the mentions of certain countries in mov
 
 {% include interactive_plots.html %}
 
+## A well deserved truce
+
 War has marched through the pages of history, leaving its mark on the world and on the silver screen. Movies are a mirror of society, reflecting its interests and conflicts, its joys and sorrows. And in times of war, the sentiments expressed in movies can be a window into the hearts and minds of the people. But beware: these sentiments are often negative, casting shadows on the human spirit and fueling stereotypes and prejudices. 
