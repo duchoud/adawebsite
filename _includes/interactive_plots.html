@@ -197,6 +197,11 @@ var cluster_popplaces= new L.MarkerClusterGroup({showCoverageOnHover: false, ico
 
 cluster_popplaces.addLayer(popplaces);
 cluster_popplaces.addTo(map);
+legend = map.addLegend("bottomright", 
+            colors = c("#FFC125",  "#FFC125", "#8A4117", "#7D0552", "#571B7E"),
+            labels = c("less", "", "", "", "more"),
+            title = "(e.g.) % voting UKIP at GE2015",
+            opacity = 1);
 
 var baseMaps = {'OSM Black & White': basemap_0};
 controler = L.control.layers(baseMaps,{"places": cluster_popplaces,"protected land points": protecland},{collapsed:false}).addTo(map);
