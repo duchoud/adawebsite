@@ -119,7 +119,7 @@
     var popplaces = new L.geoJson(geojson,{
         onEachFeature: pop_popplaces,
         pointToLayer: popplaces_marker,
-    });
+    }).addTo(map);
     
     var cluster_popplaces= new L.MarkerClusterGroup({showCoverageOnHover: false
     });
