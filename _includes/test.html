@@ -125,22 +125,7 @@
         pointToLayer: popplaces_marker,
     });
     
-    var cluster_popplaces= new L.MarkerClusterGroup({showCoverageOnHover: false, iconCreateFunction: function (cluster) {
-        var markers = cluster.getAllChildMarkers(); // on récupère tous les marqueurs du cluster ciblé
-        var childCount = cluster.getChildCount(); // on en récupère le nombre
-        var max = markers.length;
-        let valueSum = 0;
-        
-        for (let i = 0; i < max; ++i) {
-            valueSum += Number(markers[0].options.sentiment);
-        }
-        const valueMean = valueSum/max;
-        color = getColor(valueMean);
-        scale = getScale(childCount);
-    
-        var html = '<div style="background-color:white; border:6px solid '+color+'; border-radius: 50%; width:'+scale+'px;  height:'+scale+'px; text-align:center; align-items: center; display: flex; justify-content: center;"><span>' + childCount + '</span></div>';
-        return L.divIcon({ html: html, className: "marker-cluster", iconSize: L.point(40, 40), color: '#d73027' }); 
-                    }
+    var cluster_popplaces= new L.MarkerClusterGroup({showCoverageOnHover: false
     });
     
     //cluster_popplaces.addLayer(popplaces);
