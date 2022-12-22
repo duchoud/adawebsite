@@ -33,6 +33,7 @@ Now, we would like to focus on war movies production before and after four wars 
 |Iraq|Stable period before 1939|Rise and fall of movies production|Rise: to improve war's popularity   <br />   Fall: trends don't last right?|
 |First Golf War:|Not conclusive result||One year war, with less popular impact|
   
+<br>
 
 |![image](data/final_plots/two_trends_WWII.png)|![image](data/final_plots/two_trends_gulf.png)|
 |![image](data/final_plots/two_trends_iraq.png)|![image](data/final_plots/two_trends_vietnam.png)|
