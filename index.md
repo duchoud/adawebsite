@@ -47,7 +47,7 @@ Now, we would like to focus on war movies production before and after four wars 
 |![image](data/final_plots/two_trends_iraq.png)|![image](data/final_plots/two_trends_vietnam.png)|
 
 ## Attacking Sentiment town!
-*I have a bad feeling about this - Luke Skywalker*
+*"I have a bad feeling about this" - Luke Skywalker*
  
 *Veni,vidi, vici!* War production per year is ours. It’s time to attack Sentiment per genre town. Allow me to transcribe Genre-al’s great speech:
 
