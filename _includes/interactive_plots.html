@@ -1,6 +1,5 @@
 <iframe src="https://ada-project-dash-app.onrender.com" width=900 height=2000></iframe>
 
-<!DOCTYPE html>
 <html>
     <head>
         <title>leaflet basic example</title>
@@ -109,89 +108,89 @@
 </script>
 </div>
 
-<div id="map"></div>
+<div id="map" style="width: 100%; height: 600px"></div>
  
-        <script>
-        var map = L.map('map', {
-            zoomControl:true, maxZoom:7
-        }).setView([20, 0], 3);
-        var basemap_0 = L.tileLayer( 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
-            maxZoom: 18
-        });
-        basemap_0.addTo(map);
-        
-        function getColor(d) {
-            return d > 0.71  ? '#1a9850' :
-                d > 0.43  ? '#91cf60' :
-                d > 0.14  ? '#d9ef8b' :
-                d > -0.14   ? '#ffffbf' :
-                d > -0.43  ? '#fee08b' :
-                d > -0.71   ? '#fc8d59' :
-                            '#d73027';
-        }
+<script>
+var map = L.map('map', {
+    zoomControl:true, maxZoom:7
+}).setView([20, 0], 3);
+var basemap_0 = L.tileLayer( 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
+    maxZoom: 18
+});
+basemap_0.addTo(map);
 
-        function getScale(d) {
-            return d > 9999  ? 55 :
-                d > 4999  ? 50 :
-                d > 999  ? 45 :
-                d > 499  ? 40 :
-                d > 99   ? 35 :
-                d > 49  ? 30 :
-                d > 9   ? 25 :
-                            20;
-        }
+function getColor(d) {
+    return d > 0.71  ? '#1a9850' :
+        d > 0.43  ? '#91cf60' :
+        d > 0.14  ? '#d9ef8b' :
+        d > -0.14   ? '#ffffbf' :
+        d > -0.43  ? '#fee08b' :
+        d > -0.71   ? '#fc8d59' :
+                    '#d73027';
+}
 
-        function pop_popplaces(feature, layer) {
-            var popupContent = 'Release: ' + String(feature.properties['Movie_release']) + '<br>Name: ' + String(feature.properties['Movie_name_y'])+ '<br>Sentiment: ' + String(feature.properties['general_sentiment']);
-            layer.bindPopup(popupContent);
-        }
+function getScale(d) {
+    return d > 9999  ? 55 :
+        d > 4999  ? 50 :
+        d > 999  ? 45 :
+        d > 499  ? 40 :
+        d > 99   ? 35 :
+        d > 49  ? 30 :
+        d > 9   ? 25 :
+                    20;
+}
 
-        customCircleMarker = L.CircleMarker.extend({
-            options: { 
-                sentiment: 0
-            }
-            });
-        
-        function popplaces_marker(feature, latlng) {
-            return L.circleMarker(latlng, {
-                radius: 8.0,
-                fillColor: getColor(feature.properties.general_sentiment),
-                color: '#000000',
-                weight: 1,
-                opacity: 1.0,
-                fillOpacity: 0.8,
-                sentiment: feature.properties.general_sentiment
-            })
-        }
-        
-        var popplaces = new L.geoJson(geojson,{
-            onEachFeature: pop_popplaces,
-            pointToLayer: popplaces_marker,
-        });
+function pop_popplaces(feature, layer) {
+    var popupContent = 'Release: ' + String(feature.properties['Movie_release']) + '<br>Name: ' + String(feature.properties['Movie_name_y'])+ '<br>Sentiment: ' + String(feature.properties['general_sentiment']);
+    layer.bindPopup(popupContent);
+}
 
-        var cluster_popplaces= new L.MarkerClusterGroup({showCoverageOnHover: false, iconCreateFunction: function (cluster) {
-            var markers = cluster.getAllChildMarkers(); // on récupère tous les marqueurs du cluster ciblé
-			var childCount = cluster.getChildCount(); // on en récupère le nombre
-            var max = markers.length;
-            let valueSum = 0;
-            
-            for (let i = 0; i < max; ++i) {
-                valueSum += Number(markers[0].options.sentiment);
-            }
-            const valueMean = valueSum/max;
-            color = getColor(valueMean);
-            scale = getScale(childCount);
+customCircleMarker = L.CircleMarker.extend({
+    options: { 
+        sentiment: 0
+    }
+    });
 
-			var html = '<div style="background-color:white; border:6px solid '+color+'; border-radius: 50%; width:'+scale+'px;  height:'+scale+'px; text-align:center; align-items: center; display: flex; justify-content: center;"><span>' + childCount + '</span></div>';
-			return L.divIcon({ html: html, className: "marker-cluster", iconSize: L.point(40, 40), color: '#d73027' }); 
-                        }
-        });
+function popplaces_marker(feature, latlng) {
+    return L.circleMarker(latlng, {
+        radius: 8.0,
+        fillColor: getColor(feature.properties.general_sentiment),
+        color: '#000000',
+        weight: 1,
+        opacity: 1.0,
+        fillOpacity: 0.8,
+        sentiment: feature.properties.general_sentiment
+    })
+}
 
-        cluster_popplaces.addLayer(popplaces);
-        cluster_popplaces.addTo(map);
-        var baseMaps = {'OSM Black & White': basemap_0};
-        controler = L.control.layers(baseMaps,{"places": cluster_popplaces,"protected land points": protecland},{collapsed:false}).addTo(map);
-    </script>
+var popplaces = new L.geoJson(geojson,{
+    onEachFeature: pop_popplaces,
+    pointToLayer: popplaces_marker,
+});
+
+var cluster_popplaces= new L.MarkerClusterGroup({showCoverageOnHover: false, iconCreateFunction: function (cluster) {
+    var markers = cluster.getAllChildMarkers(); // on récupère tous les marqueurs du cluster ciblé
+    var childCount = cluster.getChildCount(); // on en récupère le nombre
+    var max = markers.length;
+    let valueSum = 0;
+    
+    for (let i = 0; i < max; ++i) {
+        valueSum += Number(markers[0].options.sentiment);
+    }
+    const valueMean = valueSum/max;
+    color = getColor(valueMean);
+    scale = getScale(childCount);
+
+    var html = '<div style="background-color:white; border:6px solid '+color+'; border-radius: 50%; width:'+scale+'px;  height:'+scale+'px; text-align:center; align-items: center; display: flex; justify-content: center;"><span>' + childCount + '</span></div>';
+    return L.divIcon({ html: html, className: "marker-cluster", iconSize: L.point(40, 40), color: '#d73027' }); 
+                }
+});
+
+cluster_popplaces.addLayer(popplaces);
+cluster_popplaces.addTo(map);
+var baseMaps = {'OSM Black & White': basemap_0};
+controler = L.control.layers(baseMaps,{"places": cluster_popplaces,"protected land points": protecland},{collapsed:false}).addTo(map);
+</script>
 </body>
 </html>
