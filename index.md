@@ -28,7 +28,7 @@ Now, we would like to focus on war movies production before and after four wars 
 
 
 
-
+|Name of war|Probable analyse before the war|Probable analyse after the war|Conclusion|
 |WW2|Stable period before 1939|Rise and fall of movie production|Explained previously|
 |Vietnam|Increase of war movies|Decrease of war movies|Fair to assume that due to the protests, movies wanted to avoid a politically heated topic|
 |Iraq|Stable period before 1939|Rise and fall of movies production|Rise: to improve war's popularity   <br />   Fall: trends don't last right?|
