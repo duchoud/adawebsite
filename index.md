@@ -44,31 +44,39 @@ Now, we would like to focus on war movies production before and after four wars 
 <table>
     <thead>
         <tr>
-            <th>Layer 1</th>
-            <th>Layer 2</th>
-            <th>Layer 3</th>
+            <th>Name of war</th>
+            <th>Probable analyse before the war</th>
+            <th>Probable analyse after the war</th>
+            <th>Conclusion</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td rowspan=4>L1 Name</td>
-            <td rowspan=2>L2 Name A</td>
-            <td>L3 Name A</td>
+            <td>WW2</td>
+            <td>Stable period before 1939</td>
+            <td>Rise and fall of movie production</td>
+            <td>Explained previously</td>
         </tr>
         <tr>
-            <td>L3 Name B</td>
+            <td>Vietnam</td>
+            <td>Increase of war movies</td>
+            <td>Decrease of war movies</td>
+            <td>Fair to assume that due to the protests, movies wanted to avoid a politically heated topic</td>
         </tr>
         <tr>
-            <td rowspan=2>L2 Name B</td>
-            <td>L3 Name C</td>
+            <td>Iraq</td>
+            <td>Stable period before 1939</td>
+            <td>Rise and fall of movies production</td>
+            <td>Rise: to improve war's popularity   <br />   Fall: trends don't last right?</td>
         </tr>
         <tr>
-            <td>L3 Name D</td>
+            <td>First Golf War|Not conclusive result</td>
+            <td colspan="2">Not conclusive result</td>
+            <td>One year war, with less popular impact</td>
         </tr>
     </tbody>
 </table>  
-  
-  
+ 
 <br>
 
 |![image](data/final_plots/two_trends_WWII.png)|![image](data/final_plots/two_trends_gulf.png)|
