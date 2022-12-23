@@ -39,7 +39,35 @@ Now, we would like to focus on war movies production before and after four wars 
 |WW2|Stable period before 1939|Rise and fall of movie production|Explained previously|
 |Vietnam|Increase of war movies|Decrease of war movies|Fair to assume that due to the protests, movies wanted to avoid a politically heated topic|
 |Iraq|Stable period before 1939|Rise and fall of movies production|Rise: to improve war's popularity   <br />   Fall: trends don't last right?|
-|First Golf War| : Not conclusive result : ||One year war, with less popular impact|
+|First Golf War|Not conclusive result||One year war, with less popular impact|
+  
+<table>
+    <thead>
+        <tr>
+            <th>Layer 1</th>
+            <th>Layer 2</th>
+            <th>Layer 3</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan=4>L1 Name</td>
+            <td rowspan=2>L2 Name A</td>
+            <td>L3 Name A</td>
+        </tr>
+        <tr>
+            <td>L3 Name B</td>
+        </tr>
+        <tr>
+            <td rowspan=2>L2 Name B</td>
+            <td>L3 Name C</td>
+        </tr>
+        <tr>
+            <td>L3 Name D</td>
+        </tr>
+    </tbody>
+</table>  
+  
   
 <br>
 
