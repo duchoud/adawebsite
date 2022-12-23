@@ -102,7 +102,7 @@ In the case of the Iraq War, the action genre became less negative, while romanc
 
 ## Funny Side Note:
 
-War is dark. Sometimes, when we face darkness, we tend to use comedy as a way to heal. Therefore we wanted to compare the lexicon used before and after the war by aggregating the plots used before WW2, Vietnam and Iraq and after.
+War is dark. Sometimes, when we face darkness, we tend to use comedy as a way to heal. Therefore we wanted to compare the lexicon used in comedy movie before and after the war by aggregating the plots used before WW2, Vietnam and Iraq and after.
 
 ![image](data/wordcloud_before.png)
 
