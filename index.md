@@ -74,8 +74,8 @@ Now, we would like to focus on war movies production before and after four wars 
  
 <br>
 
-|![image](data/final_plots/two_trends_WWII.png)|![image](data/final_plots/two_trends_gulf.png)|
-|![image](data/final_plots/two_trends_iraq.png)|![image](data/final_plots/two_trends_vietnam.png)|
+|![image](data/final_plots/two_trends_WWII.png)|![image](data/final_plots/two_trends_vietnam.png)|
+|![image](data/final_plots/two_trends_gulf.png)|![image](data/final_plots/two_trends_iraq.png)|
 
 ## Attacking Sentiment town!
 > "I have a bad feeling about this" - Luke Skywalker
