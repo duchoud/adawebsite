@@ -66,7 +66,7 @@ Now, we would like to focus on war movies production before and after four wars 
         </tr>
         <tr>
             <td>First Golf War</td>
-            <td colspan="2">Not conclusive result</td>
+            <td colspan="2" style="text-align: center">Not conclusive result</td>
             <td>One year war, with less popular impact</td>
         </tr>
     </tbody>
