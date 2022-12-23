@@ -64,6 +64,19 @@ After World War II, the **action** and **horror genre in movies became **more ne
 
 In the case of the Iraq War, the action genre became less negative, while romance and comedy became more positive. Horror also became more neutral. It is difficult to say for certain why these changes occurred, but it is possible that societal attitudes, industry trends, and political and cultural influences may have all played a role. 
 
+## Funny Side Note:
+
+War is dark. Sometimes, when we face darkness, we tend to use comedy as a way to heal. Therefore we wanted to compare the lexicon used before and after the war by aggregating the plots used before WW2, Vietnam and Iraq and after.
+
+![image](data/wordcloud_before.png)
+
+It is interesting to nice that words such as “Kill, escape,death” appeared as most frequent words before the war while “find, house, come, back” appeared as most frequent words after the world.
+
+![image](data/wordcloud_after.png)
+
+We suppose that it is easier to do dark humor when you’re not living through dark times, whether we seek comfort after tragedies.
+
+
 ## Imagin-Nation : A battle for Country Sentiments in Movies
 > "Your sentiment is admirable, but misplaced." - The Dark Knight
 
@@ -80,5 +93,7 @@ Upon further examination, we found that **Iraq, and Afghanistan** were frequentl
 Based on this analysis, it appears that the mentions of certain countries in movies coincide with major war periods, and the sentiments associated with these countries are mostly negative. These findings suggest that movies may serve as a reflection of society and its events and conflicts, and the sentiment associated with these events may be reflected in the portrayal of countries in movies. Take a look for yourself and play with this interactive graph and world map.
 
 {% include interactive_plots.html %}
+
+## A well deserved truce
 
 War has marched through the pages of history, leaving its mark on the world and on the silver screen. Movies are a mirror of society, reflecting its interests and conflicts, its joys and sorrows. And in times of war, the sentiments expressed in movies can be a window into the hearts and minds of the people. But beware: these sentiments are often negative, casting shadows on the human spirit and fueling stereotypes and prejudices. 
